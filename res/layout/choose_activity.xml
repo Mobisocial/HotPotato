@@ -31,4 +31,13 @@
 	android:textSize="30dip"
 	android:id="@+id/open_content"
 />
+
+<Button 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:text="Write Content"
+	android:textSize="30dip"
+	android:id="@+id/write_content"
+/>
 </LinearLayout>

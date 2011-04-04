@@ -16,6 +16,7 @@ public class ChooseActivity extends Activity {
 		findViewById(R.id.content_device).setOnClickListener(mContentDeviceListener);
 		findViewById(R.id.device_content).setOnClickListener(mDeviceContentListener);
 		findViewById(R.id.open_content).setOnClickListener(mOpenContentListener);
+		findViewById(R.id.write_content).setOnClickListener(mOpenContentListener);
 	}
 	
 	View.OnClickListener mContentDeviceListener = new View.OnClickListener() {
@@ -33,6 +34,13 @@ public class ChooseActivity extends Activity {
 	};
 	
 	View.OnClickListener mOpenContentListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+			startActivity(new Intent(ChooseActivity.this, OpenContentActivity.class));
+		}
+	};
+	
+	View.OnClickListener mWriteContentListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View arg0) {
 			startActivity(new Intent(ChooseActivity.this, OpenContentActivity.class));
