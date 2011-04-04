@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="not_sharing">Not sharing anything.</string>
+    <string name="sharing">Tag set!</string>
+    <string name="app_name">Hot Potato</string>
+</resources>

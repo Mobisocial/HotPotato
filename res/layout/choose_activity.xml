@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<Button 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:text="Content-Device"
+	android:textSize="30dip"
+	android:id="@+id/content_device"
+/>
+
+<Button 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:text="Device-Content"
+	android:textSize="30dip"
+	android:id="@+id/device_content"
+/>
+
+<Button 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:text="Open Content"
+	android:textSize="30dip"
+	android:id="@+id/open_content"
+/>
+</LinearLayout>
