@@ -7,6 +7,7 @@ import android.nfc.NdefMessage;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class WriteContentActivity extends Activity {
 	Nfc mNfc;
@@ -17,7 +18,8 @@ public class WriteContentActivity extends Activity {
 		
 		mNfc = new Nfc(this);
 		mNfc.enableExchangeMode();
-		
+		mNfc.addNdefHandler(mTagReadHandler);
+
 		setContentView(R.layout.hot_potato);
 		mStatus = ((TextView)findViewById(R.id.status));
 		findViewById(R.id.clear).setOnClickListener(mClearListener);
@@ -42,7 +44,7 @@ public class WriteContentActivity extends Activity {
 	/**
 	 * Triggered when an NdefMessage is received via card or P2P scan.
 	 */
-	private Nfc.NdefHandler mOnTagReadListener = new Nfc.NdefHandler() {
+	private Nfc.NdefHandler mTagReadHandler = new Nfc.NdefHandler() {
 		
 		@Override
 		public int handleNdef(final NdefMessage[] ndefMessages) {
@@ -51,7 +53,8 @@ public class WriteContentActivity extends Activity {
 				@Override
 				public void run() {
 					mStatus.setText(R.string.sharing);
-					mNfc.enableTagWriteMode(ndefMessages[0]);					
+					mNfc.setOnTagWriteListener(onWrite);
+					mNfc.enableTagWriteMode(ndefMessages[0]);
 				}
 			});
 			
@@ -73,5 +76,27 @@ public class WriteContentActivity extends Activity {
 
 			mStatus.setText(R.string.not_sharing);
 		}
-	}; 
+	};
+	
+	private Nfc.OnTagWriteListener onWrite = new Nfc.OnTagWriteListener() {
+		@Override
+		public void onTagWrite(int status) {
+			if (status == WRITE_OK) {
+				toast("Wrote tag!");
+			} else {
+				toast("Error writing tag.");
+			}
+		}
+	};
+	
+	public final void toast(final String text) {
+		final Activity context = this;
+		runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
 }

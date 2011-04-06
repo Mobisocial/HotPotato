@@ -9,7 +9,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_alignParentBottom="true"
-	android:text="Content-Device"
+	android:text="Cut &amp; Paste"
 	android:textSize="30dip"
 	android:id="@+id/content_device"
 />
@@ -18,7 +18,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_alignParentBottom="true"
-	android:text="Device-Content"
+	android:text="Remote Control"
 	android:textSize="30dip"
 	android:id="@+id/device_content"
 />
@@ -27,7 +27,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_alignParentBottom="true"
-	android:text="Open Content"
+	android:text="Open Here"
 	android:textSize="30dip"
 	android:id="@+id/open_content"
 />
@@ -36,7 +36,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_alignParentBottom="true"
-	android:text="Write Content"
+	android:text="Paste To Tag"
 	android:textSize="30dip"
 	android:id="@+id/write_content"
 />
