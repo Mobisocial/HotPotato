@@ -9,7 +9,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_alignParentBottom="true"
-	android:text="Cut &amp; Paste"
+	android:text="Copy &amp; Paste"
 	android:textSize="30dip"
 	android:id="@+id/content_device"
 />

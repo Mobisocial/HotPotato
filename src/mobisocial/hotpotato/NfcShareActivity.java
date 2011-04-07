@@ -117,6 +117,7 @@ public class NfcShareActivity extends Activity {
     protected void onPause() {
     	super.onPause();
     	mNfc.onPause(this);
+    	finish();
     }
     
     @Override
