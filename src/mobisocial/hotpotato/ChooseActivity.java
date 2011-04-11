@@ -17,12 +17,20 @@ public class ChooseActivity extends Activity {
 		findViewById(R.id.device_content).setOnClickListener(mDeviceContentListener);
 		findViewById(R.id.open_content).setOnClickListener(mOpenContentListener);
 		findViewById(R.id.write_content).setOnClickListener(mWriteContentListener);
+		findViewById(R.id.handover_clone).setOnClickListener(mHandoverCloneListener);
 	}
 	
 	View.OnClickListener mContentDeviceListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View arg0) {
 			startActivity(new Intent(ChooseActivity.this, ContentDeviceActivity.class));
+		}
+	};
+
+	View.OnClickListener mHandoverCloneListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+			startActivity(new Intent(ChooseActivity.this, HandoverCloneActivity.class));
 		}
 	};
 	

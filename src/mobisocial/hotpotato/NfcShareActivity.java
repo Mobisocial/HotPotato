@@ -48,7 +48,7 @@ public class NfcShareActivity extends Activity {
     			NdefMessage ndef;
 				try {
 					Log.d("nfc", "have  " + data);
-					ndef = new NdefMessage(Base64.decode(data.toString().substring(8), android.util.Base64.URL_SAFE));
+					ndef = new NdefMessage(Base64.decode(data.toString().substring(8), Base64.URL_SAFE));
 					mNfc.setOnTagWriteListener(new Nfc.OnTagWriteListener() {
 						@Override
 						public void onTagWrite(int status) {

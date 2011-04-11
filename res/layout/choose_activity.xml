@@ -40,4 +40,13 @@
 	android:textSize="30dip"
 	android:id="@+id/write_content"
 />
+
+<Button 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:text="Clone Handover"
+	android:textSize="30dip"
+	android:id="@+id/handover_clone"
+/>
 </LinearLayout>
