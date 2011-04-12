@@ -40,7 +40,8 @@
         
         <activity android:name=".NfcShareActivity"
                   android:label="@string/app_name"
-                  android:screenOrientation="portrait">
+                  android:screenOrientation="portrait"
+                  android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.VIEW" />
